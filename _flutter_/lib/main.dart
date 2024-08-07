@@ -2,12 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 void main() {
-  runApp(const Test());
+  runApp(const WidgetDetail());
 }
 
-class WidgetDetail extends StatelessWidget {
+//First click class name and then  CTRL +SHİFT+R then covert ...
+class WidgetDetail extends StatefulWidget {
   const WidgetDetail({super.key});
 
+  @override
+  State<WidgetDetail> createState() => _WidgetDetailState();
+}
+
+class _WidgetDetailState extends State<WidgetDetail> {
+  int value = 0;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,11 +25,14 @@ class WidgetDetail extends StatelessWidget {
           backgroundColor: Colors.blue,
           leading: const Text("Menü"),
         ),
-        body: const Center(
-          child: Text("Hello Flutter"),
+        body: Center(
+          child: Text(value.toString()),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            setState(() {});
+            value = value + 1;
+          },
           child: const Text("+"),
         ),
       ),
@@ -30,36 +40,41 @@ class WidgetDetail extends StatelessWidget {
   }
 }
 
-class Test extends StatefulWidget {
-  const Test({super.key});
 
-  @override
-  State<Test> createState() => _TestState();
-}
 
-class _TestState extends State<Test> {
-  int value = 0;
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-      body: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(value.toString()),
-          ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  value = value + 1;
-                });
 
-                print(value);
-                print("Tıklandı");
-              },
-              child: const Text("Tıkla"))
-        ],
-      )),
-    ));
-  }
-}
+
+
+
+
+
+// class Test extends StatefulWidget {
+//   const Test({super.key});
+
+//   @override
+//   State<Test> createState() => _TestState();
+// }
+
+// class _TestState extends State<Test> {
+//   int value = 0;
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//         home: Scaffold(
+//       body: Center(
+//           child: Column(
+//         mainAxisAlignment: MainAxisAlignment.center,
+//         children: [
+//           Text(value.toString()),
+//           ElevatedButton(
+//               onPressed: () {
+//                 setState(() {
+//                   value = value + 1;
+//                 });
+//               },
+//               child: const Text("Tıkla"))
+//         ],
+//       )),
+//     ));
+//   }
+// }
