@@ -1,0 +1,5 @@
+import 'package:hexcolor/hexcolor.dart';
+
+const String primaryColor = "#525FE1";
+const String secondaryColor = "#F86F03";
+const String backgroundColor = "#FFA41B";

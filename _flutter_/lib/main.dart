@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:_flutter_/constants/colors.dart'; //CTRL +SPACE
 
 void main() {
   runApp(const WidgetDetail());
@@ -26,7 +27,21 @@ class _WidgetDetailState extends State<WidgetDetail> {
           leading: const Text("Menü"),
         ),
         body: Center(
-          child: Text(value.toString()),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(value.toString()),
+              Text(
+                "Dtech Eğitim",
+                style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.w400,
+                    letterSpacing: 10,
+                    //    background: HexColor(backgroundColor),
+                    color: HexColor(secondaryColor)),
+              ),
+            ],
+          ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
@@ -40,7 +55,7 @@ class _WidgetDetailState extends State<WidgetDetail> {
   }
 }
 
-
+//Terminal write "flutter pub add hexcolor"
 
 
 
