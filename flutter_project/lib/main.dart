@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/constants/colors.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 void main() {
   runApp(const WidgetDetail());
@@ -23,7 +25,22 @@ class _WidgetDetailState extends State<WidgetDetail> {
           backgroundColor: Colors.deepOrange,
         ),
         body: Center(
-          child: Text(value.toString()),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(value.toString()),
+              Text(
+                "Flutter ",
+                style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.w400,
+                  letterSpacing: 10,
+                  backgroundColor: HexColor(backgroundColor),
+                  color: HexColor(primaryColor),
+                ),
+              ),
+            ],
+          ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
