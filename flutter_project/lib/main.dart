@@ -16,6 +16,13 @@ class WidgetDetail extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.deepOrange,
         ),
+        body: const Center(
+          child: Text("Hello Flutter"),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: const Text("+"),
+        ),
       ),
     );
   }
