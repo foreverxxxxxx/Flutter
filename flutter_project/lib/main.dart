@@ -18,11 +18,13 @@ class _WidgetDetailState extends State<WidgetDetail> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: "DTech"),
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Widget Detail"),
           centerTitle: true,
           backgroundColor: Colors.deepOrange,
+          leading: const Text("Menu"),
         ),
         body: Center(
           child: Column(
