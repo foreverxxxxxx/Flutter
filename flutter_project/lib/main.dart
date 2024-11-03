@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project/constants/colors.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class _WidgetDetailState extends State<WidgetDetail> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: "DTech"),
+      theme: ThemeData(textTheme: GoogleFonts.acmeTextTheme()),
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Widget Detail"),
@@ -32,14 +33,9 @@ class _WidgetDetailState extends State<WidgetDetail> {
             children: [
               Text(value.toString()),
               Text(
-                "Flutter ",
-                style: TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.w400,
-                  letterSpacing: 10,
-                  backgroundColor: HexColor(backgroundColor),
-                  color: HexColor(primaryColor),
-                ),
+                "Flutter",
+                style: GoogleFonts.acme(
+                    fontSize: 40, color: HexColor(primaryColor)),
               ),
             ],
           ),
