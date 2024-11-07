@@ -26,11 +26,16 @@ class _WidgetDetailState extends State<WidgetDetail> {
           backgroundColor: Colors.deepOrange,
           leading: const Text("Menu"),
         ),
-        body: const Center(
-          child: Image(
-            image: NetworkImage(
-                "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=600"),
-          ),
+        body: Container(
+          margin: EdgeInsets.all(20.0),
+          color: Colors.green,
+          //  child: const Padding(
+          // padding: const EdgeInsets.all(20.0),
+          // padding: const EdgeInsets.only(left: 20.0, top: 10.0),
+
+          //  padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
+          child: const Text("Example"),
+          //)
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
