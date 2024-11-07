@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project/constants/colors.dart';
+
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hexcolor/hexcolor.dart';
 
 void main() {
   runApp(const WidgetDetail());
@@ -27,17 +26,9 @@ class _WidgetDetailState extends State<WidgetDetail> {
           backgroundColor: Colors.deepOrange,
           leading: const Text("Menu"),
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(value.toString()),
-              Text(
-                "Flutter",
-                style: GoogleFonts.acme(
-                    fontSize: 40, color: HexColor(primaryColor)),
-              ),
-            ],
+        body: const Center(
+          child: Image(
+            image: AssetImage("lib/assets/images/image-2.jpg"),
           ),
         ),
         floatingActionButton: FloatingActionButton(
