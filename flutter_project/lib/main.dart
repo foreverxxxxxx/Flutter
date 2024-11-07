@@ -28,7 +28,8 @@ class _WidgetDetailState extends State<WidgetDetail> {
         ),
         body: const Center(
           child: Image(
-            image: AssetImage("lib/assets/images/image-2.jpg"),
+            image: NetworkImage(
+                "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=600"),
           ),
         ),
         floatingActionButton: FloatingActionButton(
