@@ -26,13 +26,15 @@ class _WidgetDetailState extends State<WidgetDetail> {
           backgroundColor: Colors.deepOrange,
           leading: const Text("Menu"),
         ),
-        body: Row(
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            const Text("Örnek"),
+            const Text("Example"),
             ElevatedButton(onPressed: () {}, child: const Text("Tıkla")),
             Container(
+              color: Colors.red,
               padding: const EdgeInsets.all(30),
-              color: Colors.green,
               child: const Text("Container"),
             )
           ],
